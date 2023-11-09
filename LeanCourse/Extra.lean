@@ -42,3 +42,5 @@ declare_aesop_rule_sets [obviously_continuous]
   | `($(_) fun $_* => $_) => throw ()
   | `($(_) $p) => let x := Lean.mkIdent `x; `(∃ $x:ident, $p $x)
   | _ => throw ()
+
+example [Group G] : 1 * 1 = 1 := by rfl
